@@ -53,10 +53,10 @@ loop: True
 loop-count: False # Set False for infinite loop, or set any number for finite loop.
 type-speed: 10
 start-delay: 200
-delete-delay: 5000
+delete-delay: 2000
 lines: # You can add HTML Tags in the Text
-  - text: "I've a lover's quarral with the world. -Robert Frost"
-  - text: "A mere homo sapiens with a paradoxical soul driven by quantum events."
+  - text: "I've a lover's quarral with the world.[RF]"
+  - text: "So I'm a bored guy indeed!"
 
 me-img: "/img/myukai.jpg"
 
