@@ -55,9 +55,9 @@ type-speed: 8
 start-delay: 200
 delete-delay: 2000
 lines: # You can add HTML Tags in the Text
-  - text: <a href="http://www.me-solshare.com">Software Engineer @[me-solshare]</a>
-  - text: <a href="http://www.nascenia.com">Junior Software Engineer @[nascenia]</a>
-  - text: "BSc. in Computer Science and Engineering" 
+  - text: "Software Engineer @[www.me-solshare.com]"
+  - text: "Junior Software Engineer @[www.nascenia.com]"
+  - text: "Bachelor in Computer Science and Engineering" 
 
 me-img: "/img/myukai.jpg"
 
