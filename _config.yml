@@ -51,12 +51,13 @@ dynamic-typing: True
 shuffle: True # Shuffle the lines.
 loop: True
 loop-count: False # Set False for infinite loop, or set any number for finite loop.
-type-speed: 10
+type-speed: 8
 start-delay: 200
 delete-delay: 2000
 lines: # You can add HTML Tags in the Text
-  - text: "I've a lover's quarral with the world.[RF]"
-  - text: "So I'm a bored guy indeed!"
+  - text: "Software Engineer.<a href="http://www.me-solshare.com">[me-solshare]</a>"
+  - text: "Junior Software Engineer.<a href="http://www.nascenia.com">[nascenia]</a>"
+  - text: "Computer Science and Engineering <a href="http://www.aiub.edu">BSc.</a>"
 
 me-img: "/img/myukai.jpg"
 
