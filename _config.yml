@@ -30,7 +30,7 @@ force-https: True
 
 lang: "en"
 author: "Sajidur Rahman"
-title: "[SAJIDUR RAHMAN / @reznov9185 / @sajid9185]"
+title: "[@sajid9185 / SAJIDUR RAHMAN / @reznov9185 / ..]"
 description: "Blog and website of Sajidur Rahman, blogging mainly for tech. Opinions expressed are mine."
 keywords: "Sajidur, reznov9185, personal, jekyll, theme"
 favicon: "/img/favicon.ico"
@@ -177,3 +177,4 @@ sass:
 gems:
   - jekyll-paginate
   - jemoji
+  - jekyll-twitter-plugin
