@@ -177,4 +177,4 @@ sass:
 gems:
   - jekyll-paginate
   - jemoji
-  - jekyll-twitter-plugin
+gems: ['jekyll-twitter-plugin']
