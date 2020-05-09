@@ -1,27 +1,160 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
-		<title>{{ site.title | xml_escape }}</title>
-		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-		<link>{{site.url}}{{site.baseurl}}</link>
-		<atom:link href="{{site.url}}{{site.baseurl}}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
+		<title>[@sajid9185 / SAJIDUR RAHMAN / @reznov9185 / ..]</title>
+		<description>Blog and website of Sajidur Rahman, blogging mainly for tech. Opinions expressed are mine.</description>
+		<link>https://reznov9185.github.io</link>
+		<atom:link href="https://reznov9185.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		
 			<item>
-				<title>{{post.title | xml_escape}}</title>
-				{% if post.author.name %}
-					<dc:creator>{{post.author.name | xml_escape}}</dc:creator>
-				{% endif %}
-				{% if post.excerpt %}
-					<description>{{post.excerpt | xml_escape}}</description>
-				{% else %}
-					<description>{{post.content | xml_escape}}</description>
-				{% endif %}
-				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{site.url}}{{site.baseurl}}{{post.url}}</link>
-				<guid isPermaLink="true">{{site.url}}{{site.baseurl}}{{post.url}}</guid>
+				<title>Dumb worklist of mine!</title>
+				
+				
+					<description>&lt;h3 id=&quot;my-dumb-works-are-listed-in-the-order-of-time&quot;&gt;My dumb works are listed in the order of time:&lt;/h3&gt;
+
+</description>
+				
+				<pubDate>Thu, 08 Sep 2016 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2016/09/08/my-repositories.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2016/09/08/my-repositories.html</guid>
 			</item>
-		{% endfor %}
+		
+			<item>
+				<title>Gems, rails developers cannot overlook</title>
+				
+				
+					<description>&lt;p&gt;We are talking about some powerful Gems in Rails. So first of all what
+comes to our mind is that what are gems? There are some well known and
+common genre of problems that web developers face everyday. Take &lt;em&gt;user
+authentication&lt;/em&gt; as an example. With technology, user wants to log in to
+all the systems with one account (with just a single sign up!). Say, I
+want to buy products from online but I do not want to create a new
+account on each of these e-commerce sites rather I want to sign into
+each one those with my gmail / facebook / twitter /… account. As these
+common problems recur, trying to solve them again and again will be a
+waste of our effort and this will take away the required attention from
+the application we want to develop. Basically Gems are ruby software
+packages which provide the solutions to these common problems. They are
+not necessarily related to Rails but Ruby. Most of these gems are
+available on github and developed by talented open-source developers.
+Here are some of them, which will probably blow away most of the
+headaches of Rails developers.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 07 Sep 2016 10:41:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/gem/rails/2016/09/07/GEMS-RAILS-DEVELOPERS-CANNOT-OVERLOOK.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/gem/rails/2016/09/07/GEMS-RAILS-DEVELOPERS-CANNOT-OVERLOOK.html</guid>
+			</item>
+		
+			<item>
+				<title>Welcome to { Personal } Jekyll Theme!</title>
+				
+				
+					<description>&lt;p&gt;Click the view more posts link bellow, to see the currently available post-tutorials to help you get your { Personal } website up and running quicker!&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sat, 27 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/27/welcome.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/27/welcome.html</guid>
+			</item>
+		
+			<item>
+				<title>Initial setup</title>
+				
+				
+					<description>&lt;p&gt;All features of { Personal } are controlled by setting values to variables that are defined in the
+_config.yml file. Let’s start with the initial variables that you have to set before
+serving your { Personal } website for the first time.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Thu, 25 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/25/initial-setup.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/25/initial-setup.html</guid>
+			</item>
+		
+			<item>
+				<title>Modifying the Header</title>
+				
+				
+					<description>&lt;p&gt;The intro part of the index page (Header) is consisted of four elements:&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 24 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/24/intro-layout-tutorial.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/24/intro-layout-tutorial.html</guid>
+			</item>
+		
+			<item>
+				<title>Web app mode</title>
+				
+				
+					<description>&lt;p&gt;You can make your website behave like a native web app in iOS and Android devices
+by providing links for the icons for each resolution:&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 22 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/22/web-app-mode.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/22/web-app-mode.html</guid>
+			</item>
+		
+			<item>
+				<title>Setting up the Blog</title>
+				
+				
+					<description>&lt;p&gt;A website is truly personal if it hosts your blog as well, this place of the internet
+where you can place your thoughts about anything!&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sat, 20 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/20/blog-tutorial.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/20/blog-tutorial.html</guid>
+			</item>
+		
+			<item>
+				<title>Writing posts</title>
+				
+				
+					<description>&lt;h3 id=&quot;creating-a-new-post&quot;&gt;Creating a new post&lt;/h3&gt;
+
+</description>
+				
+				<pubDate>Fri, 19 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/19/writing-posts.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/19/writing-posts.html</guid>
+			</item>
+		
+			<item>
+				<title>Adding a life event in the Timeline</title>
+				
+				
+					<description>&lt;p&gt;One of the coolest features of { Personal } is that enables you to tell your life’s story in
+the form of a timeline of photos, dates and text descriptions.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Fri, 12 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/12/timeline-tutorial.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/12/timeline-tutorial.html</guid>
+			</item>
+		
+			<item>
+				<title>Modifying the social buttons</title>
+				
+				
+					<description>&lt;p&gt;Social buttons (rendered above the footer) are great for having a small hub with all your social footprint.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Thu, 11 Jun 2015 00:00:00 +0600</pubDate>
+				<link>https://reznov9185.github.io/tech/2015/06/11/social-buttons-tutorial.html</link>
+				<guid isPermaLink="true">https://reznov9185.github.io/tech/2015/06/11/social-buttons-tutorial.html</guid>
+			</item>
+		
 	</channel>
 </rss>
