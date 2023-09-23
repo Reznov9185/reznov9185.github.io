@@ -1,0 +1,60 @@
+# site settings
+
+title: Sajid
+description: ... writing somewhat software ...
+taglong: ... writing somewhat software ...
+tagshort: ... writing somewhat software ...
+url: https://reznov9185.github.io
+baseurl: ""
+permalink: pretty
+repo: https://github.com/Reznov9185/reznov9185.github.io
+
+# author settings
+
+author:
+  name: Sajidur Rahman
+  email: reznov9185@gmail.com
+photo: /assets/jpg/sajid_prof.jpg
+
+# social media links
+
+social:
+  github: Reznov9185
+  instagram: reznov9185
+  linkedin: sajidcse
+  twitter: sajid9185
+  facebook: sajid9185
+
+# build settings
+
+exclude:
+  - LICENSE
+  - README.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+whitelist:
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: compressed
+  sourcemap: never
+
+feed:
+  path: atom.xml
+
+autopages:
+  enabled: false
+
+pagination:
+  enabled: true
+  per_page: 1
+  sort_reverse: true
+  permalink: /:num/
+  title: ":title &middot; Page :num"
