@@ -1,7 +1,10 @@
 services:
-  cvless:
-    image: bretfisher/jekyll-serve
+  jekyll:
+    image: jekyll/jekyll:latest
+    command: sh -c "rm -f Gemfile.lock && bundle install && jekyll build --verbose && jekyll serve --host 0.0.0.0 --force_polling --skip-initial-build"
     ports:
       - "4000:4000"
     volumes:
-      - .:/site
+      - .:/srv/jekyll:Z
+    environment:
+      - JEKYLL_ENV=development

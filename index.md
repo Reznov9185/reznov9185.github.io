@@ -5,18 +5,18 @@ title: Home
 
 ## About
 
-Building scalable software and ensuring reliability, health, and data encapsulation are my right now. I enjoy writing software and the new problem domains opening up with the research and application advancements in the domain of computer science and engineering excite me to explore, integrate, and build solutions around these.
+Software Writer with expertise in scalable Software Engineering, Cloud Infrastructure, Data & Site-Reliability Engineering. Passionate about human-centric computing, deep learning, and AI-driven/GenerativeAI solutions. I specialize in building resilient, high-performance systems, designing data lakes, and developing cloud-native applications with AI-enhanced automation tools.
 
-In the research realm of computer science, Human-Centric Computing, Deep Learning Models, and Software Engineering excite me the most these days.
+Currently focused on cross-functional collaboration leveraging Agile methodologies, DevOps best practices, and cutting-edge AI/ML/GenAI technologies to drive efficiency and innovation across industry and academia.
 
 ## Roles
 
-- Software Developer, Electronic Caregiver Inc.
-- Research Assistant, New Mexico State University
-- Teaching Assistant, New Mexico State University
-- Software Engineer, Misfit Technologie Ltd.
-- Software Engineer, ME-Solshare Ltd.
-- Software Engineer, Nascenia Ltd.
+- Software Engineer, L-2, Electronic Caregiver Inc.
+- Graduate Research Assistant, New Mexico State University
+- Graduate Teaching Assistant, New Mexico State University
+- Software Engineer (Team Lead), MISFIT Technologies Ltd.
+- Software Engineer, ME-SOLshare Ltd.
+- Trainee Software Engineer, Nascenia
 
 ## Education
 
@@ -25,12 +25,15 @@ In the research realm of computer science, Human-Centric Computing, Deep Learnin
 
 ## Toolbelt
 
-- Programming: `TypeScript`, `Ruby`, `Python`, `C++`, `C#`, `Elixir`
-- Software Engineering: `Agile`, `Scrum`, `Software-Estimation`, `Software Architecture`, `SOLID principles`, `OOP`, `Micro-services`
-- Databases: `MySQL/Mariadb`, `PostgreSQL`, `MongoDB(NoSQL)`, `Relational Algebra`, `ORMs`, `ActiveRecord`, `django-ORM`
-- Tools: `Git`, `Linux/Unix`, `RSpec`, `Jenkins`, `Nginx`, `Docker`
-- Web Frameworks: `RubyOnRails`, `Sinatra`, `Django`, `Flask`, `CI/CD`, `Github/Gitlab CI-CD`, `Jenkins`
-- Cloud, Cache & Task Queues: `Redis`, `Sidekiq`, `Celery`, `AWS-EC2`, `Lambda`, `S3`, `ELB`, `SQS`, `ECS`
-- Certifications: `DataDog SRE`
+- **Programming Languages:** `Ruby`, `Python`, `TypeScript`, `JavaScript`, `C++`, `C#`, `Java`, `Elixir`
+- **Frameworks & Testing:** `Rails`, `Sinatra`, `Django`, `Flask`, `Phoenix`, `Laravel`, `ASP.NET`, `Spring`, `RSpec`, `PyTest`, `Mocha`, `JUnit`, `Selenium`
+- **Software Engineering:** `Agile`, `Scrum`, `SOLID principles`, `JIRA`, `Confluence`, `Planning Poker`, `TDD`, `Code Reviews`
+- **Databases:** `MySQL`, `PostgreSQL`, `OracleDB`, `DynamoDB`, `MongoDB`, `ORMs`, `ActiveRecord`, `Django-ORM`
+- **Data Engineering:** `AWS Glue`, `Redshift`, `QuickSight`, `Athena`, `Chaos Engineering`, `Fault Injection (FIS)`
+- **SRE & Monitoring:** `DataDog`, `SLA/SLO/SLI`, `AWS BedRock`, `SageMaker`, `LLM-AI-ML`, `GenAI`
+- **DevOps & Cloud:** `AWS EC2`, `ECS`, `ELB`, `Route53`, `CloudFront`, `API Gateway`, `Lambda`, `StepFunctions`, `S3`
+- **CI/CD & IaC:** `GitHub/GitLab CI-CD`, `Jenkins`, `Terraform`, `CloudFormation`
+- **Tools:** `Git`, `Docker`, `Redis`, `Sidekiq`, `Celery`, `Nginx`
+- **Certifications:** `DataDog SRE`, `HIPAA Compliance`
 
 {% include contact.html %}
