@@ -17,6 +17,8 @@ GEM
       logger
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
     ffi (1.17.3-x86_64-linux-musl)
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.1)
@@ -92,6 +94,8 @@ GEM
     webrick (1.9.2)
 
 PLATFORMS
+  arm64-darwin-22
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES
