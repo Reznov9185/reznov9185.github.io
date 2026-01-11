@@ -3,9 +3,9 @@
 
  <title>Sajid</title>
  <link href="/atom.xml" rel="self"/>
- <link href="http://0.0.0.0:4000/"/>
- <updated>2023-09-23T07:28:46+00:00</updated>
- <id>http://0.0.0.0:4000</id>
+ <link href="https://reznov9185.github.io/"/>
+ <updated>2026-01-11T00:26:28-06:00</updated>
+ <id>https://reznov9185.github.io</id>
  <author>
    <name>Sajidur Rahman</name>
    <email>reznov9185@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>What Jekyll is</title>
-   <link href="http://0.0.0.0:4000/2022/09/01/whats-jekyll/"/>
-   <updated>2022-09-01T00:00:00+00:00</updated>
-   <id>http://0.0.0.0:4000/2022/09/01/whats-jekyll</id>
+   <link href="https://reznov9185.github.io/2022/09/01/whats-jekyll/"/>
+   <updated>2022-09-01T00:00:00-05:00</updated>
+   <id>https://reznov9185.github.io/2022/09/01/whats-jekyll</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -29,9 +29,9 @@
  
  <entry>
    <title>Example content</title>
-   <link href="http://0.0.0.0:4000/2022/08/15/example-content/"/>
-   <updated>2022-08-15T00:00:00+00:00</updated>
-   <id>http://0.0.0.0:4000/2022/08/15/example-content</id>
+   <link href="https://reznov9185.github.io/2022/08/15/example-content/"/>
+   <updated>2022-08-15T00:00:00-05:00</updated>
+   <id>https://reznov9185.github.io/2022/08/15/example-content</id>
    <content type="html">&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Howdy!&lt;/strong&gt; This is an example blog post that shows several types of &lt;abbr&gt;html&lt;/abbr&gt; content supported in this theme.&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
@@ -73,7 +73,7 @@
 
 &lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
 
-&lt;p&gt;Footnotes are supported as part of the Markdown syntax. Here’s one in action. Clicking this number&lt;sup id=&quot;fnref:fn-sample&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn-sample&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; will lead you to a footnote. The syntax looks like:&lt;/p&gt;
+&lt;p&gt;Footnotes are supported as part of the Markdown syntax. Here’s one in action. Clicking this number&lt;sup id=&quot;fnref:fn-sample&quot;&gt;&lt;a href=&quot;#fn:fn-sample&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot; role=&quot;doc-noteref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; will lead you to a footnote. The syntax looks like:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Clicking this number[^fn-sample]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -220,7 +220,7 @@
 
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:fn-sample&quot; role=&quot;doc-endnote&quot;&gt;
+    &lt;li id=&quot;fn:fn-sample&quot;&gt;
       &lt;p&gt;Handy! Now click the return link to go back. &lt;a href=&quot;#fnref:fn-sample&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
@@ -230,9 +230,9 @@
  
  <entry>
    <title>On the use of icons</title>
-   <link href="http://0.0.0.0:4000/2022/08/01/on-the-use-of-icons/"/>
-   <updated>2022-08-01T00:00:00+00:00</updated>
-   <id>http://0.0.0.0:4000/2022/08/01/on-the-use-of-icons</id>
+   <link href="https://reznov9185.github.io/2022/08/01/on-the-use-of-icons/"/>
+   <updated>2022-08-01T00:00:00-05:00</updated>
+   <id>https://reznov9185.github.io/2022/08/01/on-the-use-of-icons</id>
    <content type="html">&lt;p&gt;The icons used throughout this theme are partly custom-made, and partly come from the &lt;a href=&quot;https://iconoir.com/&quot;&gt;Iconoir&lt;/a&gt; library. More can be created or downloaded from the Iconoir website as svg files, and saved in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assets/svg&lt;/code&gt; for use in your website.&lt;/p&gt;
 
 &lt;p&gt;Here’s an overview of icons that already ship with the theme.&lt;/p&gt;
@@ -337,11 +337,11 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;svg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c&quot;&gt;/* 250% of its original size */&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;svg&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;/* red color */&lt;/span&gt;
-    &lt;span class=&quot;py&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;/* thinner line */&lt;/span&gt;
     &lt;span class=&quot;py&quot;&gt;stroke-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
