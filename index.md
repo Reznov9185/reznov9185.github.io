@@ -26,33 +26,33 @@ Currently focused on cross-functional collaboration leveraging Agile methodologi
 ## Research Publications
 
 ### 2025
-- [Integrating LoRaWAN sensor network and machine learning models to classify beef cattle behavior on arid rangelands of the southwestern United State](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_id=u5HHmVsAAAAJ:u5HHmVsAAAAJ)  
+- [Integrating LoRaWAN sensor network and machine learning models to classify beef cattle behavior on arid rangelands of the southwestern United State](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_for_view=oznop_EAAAAJ:IjCSPb-OGe4C)  
   *A Perea, S Rahman, H Chen, A Cox, S Nyamuryekung'e, M Bakir, H Cao, et al.*  
   Smart Agricultural Technology, 101002
 
 ### 2024
-- [PSXII-2 Real-time detection of parturition in beef cows managed on extensive rangeland pasture](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_id=9yKSN-GCB0wC)  
+- [PSXII-2 Real-time detection of parturition in beef cows managed on extensive rangeland pasture](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_for_view=oznop_EAAAAJ:d1gkVwhDpl0C)  
   *AR Perea, A Cox, M Funk, S Rahman, H Chen, Y Wang, et al.*  
   Journal of Animal Science 102 (Supplement_3), 603-604
 
 ### 2023
-- [PSIV-23 Activity Classification of Grazing Cows on Desert Rangeland in the Southwestern United States](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_id=2osOgNQ5qMEC)  
+- [PSIV-23 Activity Classification of Grazing Cows on Desert Rangeland in the Southwestern United States](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_for_view=oznop_EAAAAJ:u-x6o8ySG0sC)  
   *AR Perea, L Macon, S Rahman, H Chen, A Cox, S Nyamuryekung'e, et al.*  
   Journal of Animal Science 101 (Supplement_3), 486-487
 
-- [PSIV-22 Detection of Parturition of Rangeland Beef Cattle Using GPS and Accelerometer Data](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_id=qjMakFHHmFsC)  
+- [PSIV-22 Detection of Parturition of Rangeland Beef Cattle Using GPS and Accelerometer Data](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_for_view=oznop_EAAAAJ:u5HHmVD_uO8C)  
   *AR Perea, L Macon, S Rahman, H Chen, A Cox, S Nyamuryekung'e, et al.*  
   Journal of Animal Science 101 (Supplement_3), 485-486
 
-- [Activity Classification of Grazing Cows on Desert Rangeland in the Southwestern United States](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_id=IjCSPb-OGe4C)  
+- [Activity Classification of Grazing Cows on Desert Rangeland in the Southwestern United States](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_for_view=oznop_EAAAAJ:9yKSN-GCB0IC)  
   *A Ricardo Perea, L Macon, S Rahman, A Cox, S Nyamuryekung'e, et al.*  
   Journal of Animal Science 101
 
-- [Architecture and Implementation of a Digital Platform for Precision Rangeland and Livestock Management](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_id=Se3iqnhoufwC)  
+- [Architecture and Implementation of a Digital Platform for Precision Rangeland and Livestock Management](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_for_view=oznop_EAAAAJ:Tyk-4Ss8FVUC)  
   *M Bakir, AR Perea, M Funk, S Rahman, MJ Spetter, L Macon, A Cox, et al.*  
   Available at SSRN 5340121
 
-- [Smart Agricultural Technology](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_id=W7OEmFMy1HYC)  
+- [Smart Agricultural Technology](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oznop_EAAAAJ&citation_for_view=oznop_EAAAAJ:zYLM7Y9cAGgC)  
   *A Perea, S Rahman, H Chen, A Cox, S Nyamuryekung'e, M Bakir, H Cao, et al.*
 
 ## Toolbelt
