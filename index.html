@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajidur Rahman | PhD Student in Computer Science</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              600: '#059669',
+              900: '#064e3b',
+            },
+            code: {
+              bg: '#0d1117',
+              card: '#161b22',
+              border: '#30363d',
+              accent: '#38bdf8',
+              green: '#4ade80',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    /* Selection Color */
+    ::selection {
+      background-color: rgba(56, 189, 248, 0.25);
+      color: #38bdf8;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 11pt !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-shadow-none {
+        box-shadow: none !important;
+      }
+      .print-border {
+        border: 1px solid #e2e8f0 !important;
+      }
+      .print-text-dark {
+        color: #0f172a !important;
+      }
+      .print-bg-light {
+        background-color: #f8fafc !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: #0284c7 !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+
+    /* Monospace accent blinking cursor effect */
+    .typing-cursor::after {
+      content: '▋';
+      animation: blink 1s step-start infinite;
+      color: #38bdf8;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans min-h-screen antialiased selection:bg-sky-500/20 selection:text-sky-300 transition-colors duration-300" id="app-body">
+
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+      <a href="#" class="flex items-center space-x-2 font-mono text-sm font-semibold tracking-wider text-sky-400 hover:text-sky-300 transition">
+        <span class="text-emerald-400">&gt;</span>
+        <span>sajidur_rahman.sh</span>
+        <span class="px-2 py-0.5 text-xs bg-slate-800 text-slate-300 rounded border border-slate-700">v2026.2</span>
+      </a>
+
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <div class="relative hidden sm:block w-48 lg:w-64">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-slate-400"></i>
+          <input type="text" id="global-search" placeholder="Filter resume (e.g. AWS, IoT)..." 
+            class="w-full bg-slate-900 border border-slate-700/80 rounded-lg pl-8 pr-3 py-1.5 text-xs font-mono text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition">
+        </div>
+
+        <button id="theme-toggle" class="px-3 py-1.5 text-xs font-mono bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg text-slate-300 hover:text-white flex items-center space-x-1.5 transition" title="Toggle Theme (Dark / Light / Matrix)">
+          <i class="fa-solid fa-circle-half-stroke text-sky-400" id="theme-icon"></i>
+          <span id="theme-text" class="hidden md:inline">Slate Dark</span>
+        </button>
+
+        <button onclick="window.print()" class="px-3 py-1.5 text-xs font-mono bg-sky-600 hover:bg-sky-500 text-white font-medium rounded-lg shadow-sm hover:shadow flex items-center space-x-1.5 transition">
+          <i class="fa-solid fa-print"></i>
+          <span class="hidden sm:inline">Print / PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+
+    <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 sm:p-8 shadow-xl relative overflow-hidden backdrop-blur-sm print-border print-bg-light">
+      <div class="flex items-center space-x-2 mb-6 border-b border-slate-800/80 pb-4 no-print">
+        <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+        <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+        <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+        <span class="ml-2 font-mono text-xs text-slate-500">bash — sajid — 80x24</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="space-y-1">
+            <div class="flex items-center space-x-2 text-xs font-mono text-emerald-400">
+              <span class="text-slate-500">sajid@nmsu:~#</span>
+              <span class="typing-cursor font-semibold">whoami</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white font-mono">
+              Sajidur Rahman
+            </h1>
+            <p class="text-sky-400 font-mono text-sm sm:text-base font-medium flex items-center flex-wrap gap-2 pt-1">
+              <span class="bg-sky-500/10 text-sky-300 border border-sky-500/30 px-2.5 py-0.5 rounded font-mono text-xs sm:text-sm">
+                PhD Student in Computer Science
+              </span>
+              <span class="text-slate-500">•</span>
+              <span class="text-slate-300 font-sans text-sm sm:text-base">Software, Data & Cloud Engineer</span>
+            </p>
+          </div>
+
+          <p class="text-slate-300 text-sm leading-relaxed max-w-2xl font-sans pt-1">
+            PhD Student in Computer Science at New Mexico State University. Experience in software development, site reliability, and cloud data engineering, combined with academic research in Physics-Informed Neural Networks (PINN), space weather forecasting, and neuro-symbolic AI.
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 bg-slate-950/60 rounded-lg p-4 border border-slate-800/80 space-y-3 print-border">
+          <div class="text-xs font-mono text-slate-400 border-b border-slate-800 pb-2 flex justify-between items-center">
+            <span>EXTERNAL_LINKS</span>
+            <i class="fa-solid fa-network-wired text-sky-400"></i>
+          </div>
+          <div class="space-y-2 text-xs font-mono">
+            <a href="https://www.linkedin.com/in/sajidcse/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 rounded bg-slate-900 hover:bg-slate-800 border border-slate-800/60 text-slate-300 hover:text-sky-300 transition group">
+              <span class="flex items-center space-x-2">
+                <i class="fa-brands fa-linkedin text-sky-400 text-sm"></i>
+                <span>LinkedIn Profile</span>
+              </span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-500 group-hover:text-sky-400"></i>
+            </a>
+
+            <a href="https://github.com/Reznov9185" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 rounded bg-slate-900 hover:bg-slate-800 border border-slate-800/60 text-slate-300 hover:text-purple-300 transition group">
+              <span class="flex items-center space-x-2">
+                <i class="fa-brands fa-github text-purple-400 text-sm"></i>
+                <span>GitHub Repositories</span>
+              </span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-500 group-hover:text-purple-400"></i>
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=oznop_EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2 rounded bg-slate-900 hover:bg-slate-800 border border-slate-800/60 text-slate-300 hover:text-emerald-300 transition group">
+              <span class="flex items-center space-x-2">
+                <i class="fa-solid fa-graduation-cap text-emerald-400 text-sm"></i>
+                <span>Google Scholar</span>
+              </span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-500 group-hover:text-emerald-400"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="no-print bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+      <div class="flex items-center space-x-1 sm:space-x-2 overflow-x-auto py-1">
+        <span class="text-slate-500 mr-2 flex items-center"><i class="fa-solid fa-code-branch mr-1 text-sky-400"></i> JUMP:</span>
+        <a href="#summary" class="px-2.5 py-1 rounded hover:bg-slate-800 text-slate-300 hover:text-white transition">#summary</a>
+        <a href="#education" class="px-2.5 py-1 rounded hover:bg-slate-800 text-slate-300 hover:text-white transition">#education</a>
+        <a href="#skills" class="px-2.5 py-1 rounded hover:bg-slate-800 text-slate-300 hover:text-white transition">#skills</a>
+        <a href="#experience" class="px-2.5 py-1 rounded hover:bg-slate-800 text-slate-300 hover:text-white transition">#experience</a>
+        <a href="#research" class="px-2.5 py-1 rounded hover:bg-slate-800 text-slate-300 hover:text-white transition">#research</a>
+        <a href="#references" class="px-2.5 py-1 rounded hover:bg-slate-800 text-slate-300 hover:text-white transition">#references</a>
+      </div>
+    </div>
+
+    <section id="summary" class="space-y-3">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-2">
+        <i class="fa-solid fa-terminal text-sky-400 text-sm"></i>
+        <h2 class="text-lg font-bold font-mono text-white tracking-tight">01. PROFESSIONAL_SUMMARY</h2>
+      </div>
+      <div class="bg-slate-900/50 border border-slate-800/80 rounded-xl p-5 sm:p-6 space-y-3 text-slate-300 text-sm leading-relaxed print-border">
+        <p class="font-mono text-xs text-sky-400 font-medium">
+          /* Research Focus: Physics-Informed Neural Networks (PINNs), Solar Activity & Space Weather Forecasting, Neuro-Symbolic AI, Cloud Lakehouses */
+        </p>
+        <p>
+          PhD Student in Computer Science at New Mexico State University (NMSU) co-advised by Dr. Stylianos Vasileiou and Dr. Huiping Cao. Years of experience in software development, site reliability, and cloud data engineering, bridging theoretical computer science with applied cloud engineering.
+        </p>
+        <p>
+          Professional background includes designing AWS data lakehouses, HIPAA-compliant data pipelines, cloud observability platforms using Datadog, and integrating GenAI/LLM tools. Academic research focuses on applying Physics-Informed Neural Networks (PINN) and neuro-symbolic AI models to solar activity forecasting.
+        </p>
+      </div>
+    </section>
+
+    <section id="education" class="space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-2">
+        <i class="fa-solid fa-graduation-cap text-sky-400 text-sm"></i>
+        <h2 class="text-lg font-bold font-mono text-white tracking-tight">02. ACADEMIC_EDUCATION</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-slate-900/60 border border-sky-500/40 rounded-xl p-5 space-y-3 relative overflow-hidden group hover:border-sky-400 transition print-border">
+          <div class="absolute top-0 right-0 bg-sky-500/20 text-sky-300 font-mono text-[10px] px-2 py-0.5 rounded-bl font-semibold uppercase">
+            Current Degree
+          </div>
+          <div class="space-y-1">
+            <span class="text-xs font-mono text-emerald-400">Fall 2026 – Present</span>
+            <h3 class="text-base font-bold text-white font-mono">PhD Student, CS</h3>
+            <p class="text-xs text-slate-400">New Mexico State University (NMSU)</p>
+          </div>
+          <p class="text-xs text-slate-300">
+            Research in Physics-Informed Neural Networks (PINN), Solar Activity Detection, and Space Weather Forecasting under advisors Dr. Stylianos Vasileiou and Dr. Huiping Cao.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+          <div class="space-y-1">
+            <span class="text-xs font-mono text-slate-400">Spring 2023 Graduation</span>
+            <h3 class="text-base font-bold text-white font-mono">Master of Computer Science</h3>
+            <p class="text-xs text-slate-400">New Mexico State University (NMSU)</p>
+          </div>
+          <div class="flex items-center space-x-2 text-xs font-mono text-emerald-400">
+            <i class="fa-solid fa-award"></i>
+            <span>CGPA: 3.97 / 4.00</span>
+          </div>
+          <p class="text-xs text-slate-300">
+            Thesis on IoT edge-computing telemetry architecture for precision livestock farming and rangeland management.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+          <div class="space-y-1">
+            <span class="text-xs font-mono text-slate-400">Fall 2015 Graduation</span>
+            <h3 class="text-base font-bold text-white font-mono">B.Sc. CS & Engineering</h3>
+            <p class="text-xs text-slate-400">American Int'l University Bangladesh (AIUB)</p>
+          </div>
+          <div class="flex items-center space-x-2 text-xs font-mono text-amber-400">
+            <i class="fa-solid fa-trophy"></i>
+            <span>CGPA: 3.96 | Summa Cum Laude</span>
+          </div>
+          <p class="text-xs text-slate-300">
+            Thesis on computer-vision security frameworks for automated surveillance and event detection systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-code text-sky-400 text-sm"></i>
+          <h2 class="text-lg font-bold font-mono text-white tracking-tight">03. TECHNICAL_SKILL_MATRIX</h2>
+        </div>
+        <span class="text-xs font-mono text-slate-500 hidden sm:inline">&lt;skills.json&gt;</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="skills-grid">
+        <div class="skill-card bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-3 print-border" data-keywords="data engineering aws glue redshift athena bedrock genai docusign lakehouse parquet snowflake">
+          <div class="flex items-center space-x-2 text-sky-400 border-b border-slate-800/80 pb-2">
+            <i class="fa-solid fa-database text-xs"></i>
+            <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-200">Data & AI Engineering</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="skill-tag">AWS Glue</span>
+            <span class="skill-tag">Data Lakes</span>
+            <span class="skill-tag">Parquet</span>
+            <span class="skill-tag">Redshift</span>
+            <span class="skill-tag">Athena</span>
+            <span class="skill-tag">AWS Bedrock</span>
+            <span class="skill-tag">GenAI Integration</span>
+            <span class="skill-tag">Snowflake</span>
+          </div>
+        </div>
+
+        <div class="skill-card bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-3 print-border" data-keywords="sre datadog sla slo sli llm genai metrics site reliability superblocks slack alerts">
+          <div class="flex items-center space-x-2 text-emerald-400 border-b border-slate-800/80 pb-2">
+            <i class="fa-solid fa-chart-line text-xs"></i>
+            <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-200">SRE & Observability</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="skill-tag">Datadog</span>
+            <span class="skill-tag">SLA / SLO / SLI</span>
+            <span class="skill-tag">Slack Automation</span>
+            <span class="skill-tag">CloudWatch</span>
+            <span class="skill-tag">Incident Response</span>
+            <span class="skill-tag">Superblocks</span>
+          </div>
+        </div>
+
+        <div class="skill-card bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-3 print-border" data-keywords="python ruby typescript javascript c++ c# java elixir programming languages">
+          <div class="flex items-center space-x-2 text-amber-400 border-b border-slate-800/80 pb-2">
+            <i class="fa-solid fa-laptop-code text-xs"></i>
+            <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-200">Programming Languages</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Ruby</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Elixir</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-card bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-3 print-border" data-keywords="rails django flask phoenix laravel asp.net spring react frameworks">
+          <div class="flex items-center space-x-2 text-rose-400 border-b border-slate-800/80 pb-2">
+            <i class="fa-solid fa-cubes text-xs"></i>
+            <h3 class="font-mono text-xs font-bold uppercase tracking-wider text-slate-200">Frameworks & Web</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="skill-tag">Ruby on Rails</span>
+                <span class="skill-tag">Sinatra</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Phoenix</span>
+            <span class="skill-tag">ASP.NET</span>
+            <span class="skill-tag">React.js</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-briefcase text-sky-400 text-sm"></i>
+          <h2 class="text-lg font-bold font-mono text-white tracking-tight">04. EXPERIENCE_LOG</h2>
+        </div>
+        <span class="text-xs font-mono text-slate-500">10+ Years Professional Background</span>
+      </div>
+
+      <div class="space-y-6 relative before:absolute before:inset-0 before:left-3 md:before:left-4 before:w-0.5 before:bg-slate-800" id="experience-list">
+
+        <!-- Job 1 -->
+        <div class="job-item relative pl-8 md:pl-10 space-y-2" data-keywords="nmsu research assistant teaching assistant leap web lead pinn neuro-symbolic solar activity forecasting space weather python dr cao dr vasileiou">
+          <div class="absolute left-1 md:left-2 top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-950 flex items-center justify-center text-[8px] text-slate-950 font-bold"></div>
+          
+          <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+            <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/60 pb-3">
+              <div>
+                <div class="flex items-center space-x-2">
+                  <h3 class="text-base font-bold font-mono text-white">Graduate Research Assistant (LEAP Web Lead) & Teaching Assistant</h3>
+                  <span class="px-2 py-0.5 bg-sky-500/10 text-sky-400 border border-sky-500/30 rounded font-mono text-[10px]">Academic</span>
+                </div>
+                <p class="text-xs font-mono text-sky-400 mt-0.5">New Mexico State University (NMSU) <span class="text-slate-500 font-sans">| Dept. of Computer Science</span></p>
+              </div>
+              <span class="font-mono text-xs text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
+                August 2026 – Present
+              </span>
+            </div>
+
+            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Co-advised by Dr. Stylianos Vasileiou and Dr. Huiping Cao, researching Physics-Informed Neural Networks (PINN) and neuro-symbolic models for solar activity detection and space weather forecasting.</li>
+              <li>Developed data transformation pipelines to process multi-modal solar observation feeds and magnetic flux imagery.</li>
+              <li>Working as Teaching Assistant for Computer Science, Research Assistant for Astronomy.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/50">
+              <span class="skill-tag">PINN</span>
+              <span class="skill-tag">Solar Activity Detection</span>
+              <span class="skill-tag">Space Weather Forecasting</span>
+              <span class="skill-tag">Neuro-Symbolic AI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job-item relative pl-8 md:pl-10 space-y-2" data-keywords="electronic caregiver software developer sre data engineering snowflake aws glue bedrock hipaa datadog superblocks anelto parquet">
+          <div class="absolute left-1 md:left-2 top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-slate-950"></div>
+          
+          <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+            <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/60 pb-3">
+              <div>
+                <div class="flex items-center space-x-2">
+                  <h3 class="text-base font-bold font-mono text-white">Software Developer II</h3>
+                  <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded font-mono text-[10px]">Industry</span>
+                </div>
+                <p class="text-xs font-mono text-emerald-400 mt-0.5">Electronic Caregiver Inc.</p>
+              </div>
+              <span class="font-mono text-xs text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
+                July 2023 – June 2026
+              </span>
+            </div>
+
+            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Developed automated data lake pipelines to sync user interaction data from Snowflake data warehouses into AWS Data Lakes using Parquet, AWS Glue ETL, and Amazon Athena.</li>
+              <li>Created downtime resiliency ingestion tools for vitals and event telemetry data from Anelto IoT devices to maintain operations during external outages.</li>
+              <li>Configured system observability with Datadog, including automated alerts and daily AI-driven checks delivered to Slack.</li>
+              <li>Migrated internal scripts and workflows from Airplane to Superblocks deployed on AWS ECS.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/50">
+              <span class="skill-tag">Snowflake</span>
+              <span class="skill-tag">AWS Glue & Athena</span>
+              <span class="skill-tag">Parquet</span>
+              <span class="skill-tag">Datadog</span>
+              <span class="skill-tag">Superblocks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job-item relative pl-8 md:pl-10 space-y-2" data-keywords="nmsu graduate research assistant teaching assistant iot cattle monitoring sustainable southwest beef high performance computing hpc">
+          <div class="absolute left-1 md:left-2 top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"></div>
+          
+          <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+            <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/60 pb-3">
+              <div>
+                <div class="flex items-center space-x-2">
+                  <h3 class="text-base font-bold font-mono text-white">Graduate Research Assistant & Teaching Assistant</h3>
+                  <span class="px-2 py-0.5 bg-slate-800 text-slate-300 border border-slate-700 rounded font-mono text-[10px]">Academic</span>
+                </div>
+                <p class="text-xs font-mono text-sky-400 mt-0.5">New Mexico State University (NMSU)</p>
+              </div>
+              <span class="font-mono text-xs text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
+                May 2021 – May 2023
+              </span>
+            </div>
+
+            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Built an IoT sensor network and telemetry platform for tracking beef cattle behavior on southwestern rangelands (Sustainable Southwest Beef project).</li>
+              <li>Used NMSU's Discovery High-Performance Computing (HPC) cluster to process accelerometer and GPS telemetry alongside machine learning classification algorithms.</li>
+              <li>Instructed undergraduate CS lab sessions covering algorithms and software engineering principles.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/50">
+              <span class="skill-tag">IoT Telemetry</span>
+              <span class="skill-tag">LoRaWAN</span>
+              <span class="skill-tag">HPC Cluster</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="job-item relative pl-8 md:pl-10 space-y-2" data-keywords="ifarmer jualo team lead software engineer microservices erp ecommerce ruby rails django">
+          <div class="absolute left-1 md:left-2 top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"></div>
+          
+          <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+            <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/60 pb-3">
+              <div>
+                <div class="flex items-center space-x-2">
+                  <h3 class="text-base font-bold font-mono text-white">Software Engineer (Team Lead)</h3>
+                  <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded font-mono text-[10px]">Industry</span>
+                </div>
+                <p class="text-xs font-mono text-amber-400 mt-0.5">ifarmer.asia / Jualo.com</p>
+              </div>
+              <span class="font-mono text-xs text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
+                March 2018 – May 2020
+              </span>
+            </div>
+
+            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Led engineering team to build agri-fintech ERP microservices.</li>
+              <li>Implemented backend platform optimizations for Jualo.com e-commerce features, reducing query response latencies by 35%.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/50">
+              <span class="skill-tag">Team Leadership</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">ERP Architectures</span>
+              <span class="skill-tag">E-Commerce</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 5 -->
+        <div class="job-item relative pl-8 md:pl-10 space-y-2" data-keywords="solshare software engineer smart grid solar cloud p2p bangladesh">
+          <div class="absolute left-1 md:left-2 top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-slate-950"></div>
+          
+          <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+            <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/60 pb-3">
+              <div>
+                <h3 class="text-base font-bold font-mono text-white">Software Engineer</h3>
+                <p class="text-xs font-mono text-amber-400 mt-0.5">SOLshare Ltd.</p>
+              </div>
+              <span class="font-mono text-xs text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
+                September 2016 – February 2018
+              </span>
+            </div>
+
+            <ul class="list-disc list-inside text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+              <li>Designed cloud backend microservices for peer-to-peer (P2P) solar energy microgrid networks in rural Bangladesh.</li>
+              <li>Programmed pay-as-you-go metering transaction APIs synced with IoT electricity meters.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 6 -->
+        <div class="job-item relative pl-8 md:pl-10 space-y-2" data-keywords="nascenia trainee software engineer ruby rails web engineering">
+          <div class="absolute left-1 md:left-2 top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950"></div>
+          
+          <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3 hover:border-slate-700 transition print-border">
+            <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/60 pb-3">
+              <div>
+                <h3 class="text-base font-bold font-mono text-white">Trainee Software Engineer</h3>
+                <p class="text-xs font-mono text-slate-400 mt-0.5">Nascenia</p>
+              </div>
+              <span class="font-mono text-xs text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
+                August 2015 – August 2016
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300">
+              Assisted in full-stack web engineering using Ruby on Rails, writing unit tests and participating in Agile software development sprints.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="certifications" class="space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-2">
+        <i class="fa-solid fa-certificate text-sky-400 text-sm"></i>
+        <h2 class="text-lg font-bold font-mono text-white tracking-tight">05. CERTIFICATIONS_&_OPEN_SOURCE</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4 flex items-center space-x-4 hover:border-slate-700 transition print-border">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-lg font-mono">
+            SRE
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white font-mono">Datadog SRE Certification</h3>
+            <p class="text-xs text-slate-400">Observability & Incident Management</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4 flex items-center space-x-4 hover:border-slate-700 transition print-border">
+          <div class="w-12 h-12 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold text-lg font-mono">
+            HIPAA
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white font-mono">HIPAA Compliance</h3>
+            <p class="text-xs text-slate-400">Healthcare Data Privacy Architecture</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-book-bookmark text-sky-400 text-sm"></i>
+          <h2 class="text-lg font-bold font-mono text-white tracking-tight">06. RESEARCH_&_PUBLICATIONS</h2>
+        </div>
+        
+        <div class="no-print flex space-x-1 text-xs font-mono">
+          <button onclick="filterPubs('all')" id="pub-btn-all" class="pub-filter-btn px-2.5 py-1 rounded bg-sky-600 text-white">All</button>
+          <button onclick="filterPubs('journal')" id="pub-btn-journal" class="pub-filter-btn px-2.5 py-1 rounded bg-slate-800 text-slate-400 hover:text-white">Journals</button>
+          <button onclick="filterPubs('conference')" id="pub-btn-conference" class="pub-filter-btn px-2.5 py-1 rounded bg-slate-800 text-slate-400 hover:text-white">Conferences</button>
+          <button onclick="filterPubs('theses')" id="pub-btn-theses" class="pub-filter-btn px-2.5 py-1 rounded bg-slate-800 text-slate-400 hover:text-white">Theses</button>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex flex-wrap items-center justify-between gap-4 print-border">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white font-mono">Google Scholar Profile Metrics</h3>
+            <p class="text-xs text-slate-400">Academic Profile @ New Mexico State University</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-3 sm:space-x-6 text-xs font-mono">
+          <div class="text-center px-3 py-1 bg-slate-950 rounded border border-slate-800">
+            <span class="block text-sky-400 font-bold text-sm">16</span>
+            <span class="text-[10px] text-slate-500 uppercase">Citations</span>
+          </div>
+          <div class="text-center px-3 py-1 bg-slate-950 rounded border border-slate-800">
+            <span class="block text-emerald-400 font-bold text-sm">2</span>
+            <span class="text-[10px] text-slate-500 uppercase">h-index</span>
+          </div>
+          <div class="text-center px-3 py-1 bg-slate-950 rounded border border-slate-800">
+            <span class="block text-amber-400 font-bold text-sm">1</span>
+            <span class="text-[10px] text-slate-500 uppercase">i10-index</span>
+          </div>
+          <a href="https://scholar.google.com/citations?user=oznop_EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="no-print px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded font-medium flex items-center space-x-1.5 transition">
+            <span>Scholar Profile</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="space-y-3" id="publications-container">
+        <div class="pub-item pub-journal bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded font-mono text-[10px]">Peer-Reviewed Journal</span>
+            <span class="font-mono text-xs text-slate-400">Smart Agricultural Technology, Vol. 11, 101002 (2025)</span>
+          </div>
+          <h3 class="text-sm font-bold text-white font-mono">
+            Integrating LoRaWAN sensor networks and machine learning models to classify beef cattle behavior on arid rangelands of the southwestern United States
+          </h3>
+          <p class="text-xs text-slate-300">
+            A Perea, <strong>Sajidur Rahman</strong>, H Chen, A Cox, S Nyamuryekung'e, M Bakir, H Cao, et al.
+          </p>
+          <div class="flex items-center space-x-3 text-xs font-mono pt-1 text-slate-400">
+            <span class="text-emerald-400 font-bold"><i class="fa-solid fa-quote-right mr-1"></i> 9 Citations</span>
+            <span>•</span>
+            <span>Elsevier Smart Agricultural Tech</span>
+          </div>
+        </div>
+
+        <div class="pub-item pub-journal bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded font-mono text-[10px]">Peer-Reviewed Journal</span>
+            <span class="font-mono text-xs text-slate-400">Computers and Electronics in Agriculture, Vol. 247, 111615 (2026)</span>
+          </div>
+          <h3 class="text-sm font-bold text-white font-mono">
+            A scalable, end-to-end IoT and remote sensing platform for precision rangeland and livestock management
+          </h3>
+          <p class="text-xs text-slate-300">
+            ME Bakir, AR Perea, M Funk, <strong>Sajidur Rahman</strong>, MJ Spetter, L Macon, A Cox, et al.
+          </p>
+          <div class="flex items-center space-x-3 text-xs font-mono pt-1 text-slate-400">
+            <span class="text-emerald-400 font-bold"><i class="fa-solid fa-quote-right mr-1"></i> 4 Citations</span>
+            <span>•</span>
+            <span>Elsevier Computers & Electronics in Ag</span>
+          </div>
+        </div>
+
+        <div class="pub-item pub-journal bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded font-mono text-[10px]">Peer-Reviewed Journal</span>
+            <span class="font-mono text-xs text-slate-400">Journal of Animal Science, Vol. 102 (Suppl_3), 603-604 (2024)</span>
+          </div>
+          <h3 class="text-sm font-bold text-white font-mono">
+            PSXII-2 Real-time detection of parturition in beef cows managed on extensive rangeland pasture
+          </h3>
+          <p class="text-xs text-slate-300">
+            AR Perea, A Cox, M Funk, <strong>Sajidur Rahman</strong>, H Chen, Y Wang, et al.
+          </p>
+          <div class="flex items-center space-x-3 text-xs font-mono pt-1 text-slate-400">
+            <span>Oxford Academic Journal of Animal Science</span>
+          </div>
+        </div>
+
+        <div class="pub-item pub-journal bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded font-mono text-[10px]">Peer-Reviewed Journal</span>
+            <span class="font-mono text-xs text-slate-400">Journal of Animal Science, Vol. 101, 486 (2023)</span>
+          </div>
+          <h3 class="text-sm font-bold text-white font-mono">
+            Activity Classification of Grazing Cows on Desert Rangeland in the Southwestern United States
+          </h3>
+          <p class="text-xs text-slate-300">
+            A Ricardo Perea, L Macon, <strong>Sajidur Rahman</strong>, A Cox, S Nyamuryekung'e, et al.
+          </p>
+          <div class="flex items-center space-x-3 text-xs font-mono pt-1 text-slate-400">
+            <span>Oxford Academic Journal of Animal Science</span>
+          </div>
+        </div>
+
+        <div class="pub-item pub-journal bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded font-mono text-[10px]">Peer-Reviewed Journal</span>
+            <span class="font-mono text-xs text-slate-400">Journal of Animal Science, Vol. 101, 485 (2023)</span>
+          </div>
+          <h3 class="text-sm font-bold text-white font-mono">
+            Detection of Parturition of Rangeland Beef Cattle Using GPS and Accelerometer Data
+          </h3>
+          <p class="text-xs text-slate-300">
+            A Ricardo Perea, L Macon, <strong>Sajidur Rahman</strong>, A Cox, S Nyamuryekung'e, et al.
+          </p>
+          <div class="flex items-center space-x-3 text-xs font-mono pt-1 text-slate-400">
+            <span>Oxford Academic Journal of Animal Science</span>
+          </div>
+        </div>
+
+        <div class="pub-item pub-conference bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <span class="px-2 py-0.5 bg-sky-500/10 text-sky-400 border border-sky-500/30 rounded font-mono text-[10px]">Conference Proceedings</span>
+            <span class="font-mono text-xs text-slate-400">2nd U.S. Precision Livestock Farming (USPLF 2023)</span>
+          </div>
+          <h3 class="text-sm font-bold text-white font-mono">
+            Deployment of Scalable IoT Architecture for Real-Time Cattle Tracking in Sustainable Livestock Systems
+          </h3>
+          <p class="text-xs text-slate-300">
+            Presented results from field deployments across southwestern ranching sites.
+          </p>
+        </div>
+
+        <div class="pub-item pub-review bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-user-check text-emerald-400 text-xs"></i>
+            <h3 class="text-xs font-bold text-white font-mono uppercase tracking-wider">Peer Reviewer Duties</h3>
+          </div>
+          <ul class="list-disc list-inside text-xs text-slate-300 space-y-1">
+            <li><strong>Smart Agricultural Technology</strong> (Elsevier Journal)</li>
+            <li><strong>Computers and Electronics in Agriculture</strong> (Elsevier Journal)</li>
+            <li><strong>2nd U.S. Precision Livestock Farming (USPLF)</strong> Conference</li>
+          </ul>
+        </div>
+
+        <div class="pub-item pub-theses bg-slate-900/60 border border-slate-800 rounded-xl p-4 space-y-2 print-border">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-scroll text-amber-400 text-xs"></i>
+            <h3 class="text-xs font-bold text-white font-mono uppercase tracking-wider">Academic Theses</h3>
+          </div>
+          <div class="space-y-2 text-xs text-slate-300">
+            <div>
+              <span class="font-mono text-sky-400 font-bold">Master's Thesis (NMSU):</span>
+              <p class="text-slate-400">Designing an End-to-End IoT Telemetry Platform and Cloud Architecture for Sustainable Cattle Ranching.</p>
+            </div>
+            <div>
+              <span class="font-mono text-amber-400 font-bold">Bachelor's Thesis (AIUB):</span>
+              <p class="text-slate-400">Computer Vision-Driven Security and Automated Event Detection in Video Surveillance Systems.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="references" class="space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-2">
+        <i class="fa-solid fa-users text-sky-400 text-sm"></i>
+        <h2 class="text-lg font-bold font-mono text-white tracking-tight">07. PROFESSIONAL_REFERENCES</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-2 hover:border-slate-700 transition print-border">
+          <h3 class="text-sm font-bold text-white font-mono">Dr. Stylianos Vasileiou</h3>
+          <p class="text-xs font-mono text-sky-400">PhD Academic Advisor</p>
+          <p class="text-xs text-slate-400">Assistant Professor, Dept. of Computer Science</p>
+          <p class="text-xs text-slate-400">New Mexico State University (NMSU)</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-2 hover:border-slate-700 transition print-border">
+          <h3 class="text-sm font-bold text-white font-mono">Dr. Huiping Cao</h3>
+          <p class="text-xs font-mono text-sky-400">PhD Academic Advisor</p>
+          <p class="text-xs text-slate-400">Professor, Dept. of Computer Science</p>
+          <p class="text-xs text-slate-400">New Mexico State University (NMSU)</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-2 hover:border-slate-700 transition print-border">
+          <h3 class="text-sm font-bold text-white font-mono">Abel Salcido</h3>
+          <p class="text-xs font-mono text-emerald-400">CTO & Engineering Supervisor</p>
+          <p class="text-xs text-slate-400">Site Reliability & Data Engineering</p>
+          <p class="text-xs text-slate-400">Electronic Caregiver Inc.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-2 hover:border-slate-700 transition print-border">
+          <h3 class="text-sm font-bold text-white font-mono">Dr. Santiago Utsumi</h3>
+          <p class="text-xs font-mono text-amber-400">Project Principal Investigator (PI)</p>
+          <p class="text-xs text-slate-400">Sustainable Southwest Beef Project</p>
+          <p class="text-xs text-slate-400">New Mexico State University (NMSU)</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800/80 mt-12 py-8 bg-slate-950 no-print text-center font-mono text-xs text-slate-500 space-y-2">
+    <p class="text-[11px] text-slate-600">Built with Clean Developer CS UI Aesthetics, Tailwind CSS & Gemini • 2026</p>
+  </footer>
+
+  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-10 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-emerald-500 text-slate-950 px-4 py-2.5 rounded-lg shadow-xl font-mono text-xs font-bold flex items-center space-x-2 border border-emerald-400">
+      <i class="fa-solid fa-check-circle text-slate-950"></i>
+      <span id="toast-message">Copied to clipboard!</span>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.skill-tag').forEach(tag => {
+      if(!tag.className.includes('text-')) {
+        tag.className = "skill-tag px-2 py-0.5 bg-slate-800 text-slate-300 border border-slate-700 rounded text-[11px] font-mono hover:border-sky-500/50 hover:text-white transition cursor-default";
+      }
+    });
+
+    function copyToClipboard(text, label) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      showToast(`${label} copied to clipboard!`);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-10', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-10', 'opacity-0');
+      }, 2500);
+    }
+
+    const searchInput = document.getElementById('global-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        filterContent(term);
+      });
+    }
+
+    function filterByTag(tag) {
+      if(searchInput) {
+        searchInput.value = tag;
+        filterContent(tag.toLowerCase());
+      }
+    }
+
+    function resetFilter() {
+      if(searchInput) {
+        searchInput.value = '';
+        filterContent('');
+      }
+    }
+
+    function filterContent(term) {
+      const skillCards = document.querySelectorAll('.skill-card');
+      skillCards.forEach(card => {
+        const keywords = card.getAttribute('data-keywords') || '';
+        const text = card.textContent.toLowerCase();
+        if (term === '' || keywords.includes(term) || text.includes(term)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const jobItems = document.querySelectorAll('.job-item');
+      jobItems.forEach(job => {
+        const keywords = job.getAttribute('data-keywords') || '';
+        const text = job.textContent.toLowerCase();
+        if (term === '' || keywords.includes(term) || text.includes(term)) {
+          job.style.display = 'block';
+        } else {
+          job.style.display = 'none';
+        }
+      });
+    }
+
+    function filterPubs(type) {
+      const allBtns = document.querySelectorAll('.pub-filter-btn');
+      allBtns.forEach(btn => {
+        btn.classList.remove('bg-sky-600', 'text-white');
+        btn.classList.add('bg-slate-800', 'text-slate-400');
+      });
+
+      const activeBtn = document.getElementById(`pub-btn-${type}`);
+      if(activeBtn) {
+        activeBtn.classList.remove('bg-slate-800', 'text-slate-400');
+        activeBtn.classList.add('bg-sky-600', 'text-white');
+      }
+
+      const items = document.querySelectorAll('.pub-item');
+      items.forEach(item => {
+        if (type === 'all') {
+          item.style.display = 'block';
+        } else if (type === 'journal' && item.classList.contains('pub-journal')) {
+          item.style.display = 'block';
+        } else if (type === 'conference' && item.classList.contains('pub-conference')) {
+          item.style.display = 'block';
+        } else if (type === 'theses' && item.classList.contains('pub-theses')) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    const themes = ['slate-dark', 'clean-light', 'matrix-code'];
+    let currentThemeIdx = 0;
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+    const body = document.getElementById('app-body');
+
+    themeToggleBtn.addEventListener('click', () => {
+      currentThemeIdx = (currentThemeIdx + 1) % themes.length;
+      const theme = themes[currentThemeIdx];
+
+      if (theme === 'clean-light') {
+        body.className = "bg-slate-50 text-slate-800 font-sans min-h-screen antialiased selection:bg-sky-500/20";
+        themeIcon.className = "fa-solid fa-sun text-amber-500";
+        themeText.textContent = "Clean Light";
+      } else if (theme === 'matrix-code') {
+        body.className = "bg-black text-emerald-400 font-mono min-h-screen antialiased selection:bg-emerald-500/30";
+        themeIcon.className = "fa-solid fa-terminal text-emerald-400";
+        themeText.textContent = "Matrix Code";
+      } else {
+        body.className = "bg-slate-950 text-slate-200 font-sans min-h-screen antialiased selection:bg-sky-500/20 selection:text-sky-300";
+        themeIcon.className = "fa-solid fa-circle-half-stroke text-sky-400";
+        themeText.textContent = "Slate Dark";
+      }
+    });
+  </script>
+</body>
+</html>
