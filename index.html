@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,19 +16,28 @@
             mono: ['JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'monospace'],
           },
           colors: {
+            slate: {
+              50: '#fcfaf6', 100: '#f7f2e9', 200: '#41382f',
+              300: '#534a40', 400: '#766a5e', 500: '#918373',
+              600: '#b5a797', 700: '#d6cbbd', 800: '#e9e1d6',
+              900: '#fffcf7', 950: '#f5f0e8'
+            },
+            sky: {
+              300: '#7b5e45', 400: '#80654e', 500: '#b49a7b', 600: '#c8b49a'
+            },
+            emerald: {
+              300: '#6e7458', 400: '#74765a', 500: '#aaa68b', 600: '#b8ac8e'
+            },
+            amber: {400: '#94785b', 500: '#a98e6e'},
+            rose: {400: '#a7897a', 500: '#b49b8c'},
+            purple: {300: '#8d776f', 400: '#8d776f'},
             brand: {
-              50: '#f0fdf4',
-              100: '#dcfce7',
-              500: '#10b981',
-              600: '#059669',
-              900: '#064e3b',
+              50: '#faf6ed', 100: '#f0e9dc', 500: '#a99274',
+              600: '#90795e', 900: '#514337'
             },
             code: {
-              bg: '#0d1117',
-              card: '#161b22',
-              border: '#30363d',
-              accent: '#38bdf8',
-              green: '#4ade80',
+              bg: '#f6f0e7', card: '#fffdf9', border: '#e2d8cb',
+              accent: '#977b5f', green: '#7b8066'
             }
           }
         }
@@ -104,6 +113,94 @@
     @keyframes blink {
       50% { opacity: 0; }
     }
+
+    /* Quiet beige design: preserve all original components, spacing and behaviors. */
+    :root { color-scheme: light; }
+    body { background: #f5f0e8 !important; color: #41382f !important; }
+    .text-white { color: #342e27 !important; }
+    .hover\:text-white:hover { color: #342e27 !important; }
+    .text-slate-950 { color: #342e27 !important; }
+    .typing-cursor::after { color: #80654e; }
+    ::-webkit-scrollbar-track { background: #eee7de; }
+    ::-webkit-scrollbar-thumb { background: #c8b9a7; }
+    ::-webkit-scrollbar-thumb:hover { background: #a99a89; }
+    ::selection { background: #d9c5ac; color: #342e27; }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    /* Optional dark theme; Soft Beige remains the initial state. */
+    html.dark-theme { color-scheme: dark; }
+    html.dark-theme body { background: #191b1b !important; color: #e7e0d7 !important; }
+    html.dark-theme .typing-cursor::after { color: #ceb08b; }
+    html.dark-theme ::-webkit-scrollbar-track { background: #232625; }
+    html.dark-theme ::-webkit-scrollbar-thumb { background: #5b5a52; }
+    html.dark-theme ::selection { background: #695a48; color: #faf2e7; }
+    html.dark-theme .bg-slate-950 { background-color: #191b1b !important; }
+    html.dark-theme .bg-slate-950\/80 { background-color: rgba(25,27,27,.94) !important; }
+    html.dark-theme .bg-slate-950\/60 { background-color: #222525 !important; }
+    html.dark-theme .bg-slate-900 { background-color: #292c2b !important; }
+    html.dark-theme .bg-slate-900\/90 { background-color: #292c2b !important; }
+    html.dark-theme .bg-slate-900\/80 { background-color: #292c2b !important; }
+    html.dark-theme .bg-slate-900\/70 { background-color: #292c2b !important; }
+    html.dark-theme .bg-slate-900\/60 { background-color: #292c2b !important; }
+    html.dark-theme .bg-slate-900\/50 { background-color: #292c2b !important; }
+    html.dark-theme .bg-slate-800 { background-color: #343837 !important; }
+    html.dark-theme .bg-slate-700 { background-color: #434744 !important; }
+    html.dark-theme .bg-slate-600 { background-color: #555a55 !important; }
+    html.dark-theme .bg-sky-500 { background-color: #927d64 !important; }
+    html.dark-theme .bg-sky-600 { background-color: #806c55 !important; }
+    html.dark-theme .bg-sky-500\/10 { background-color: rgba(171,145,112,.13) !important; }
+    html.dark-theme .bg-sky-500\/20 { background-color: rgba(171,145,112,.20) !important; }
+    html.dark-theme .bg-emerald-500 { background-color: #788779 !important; }
+    html.dark-theme .bg-emerald-600 { background-color: #627465 !important; }
+    html.dark-theme .bg-emerald-500\/10 { background-color: rgba(120,135,121,.14) !important; }
+    html.dark-theme .bg-amber-500\/10 { background-color: rgba(194,158,112,.13) !important; }
+    html.dark-theme .bg-amber-500\/80 { background-color: #ac8b63 !important; }
+    html.dark-theme .bg-rose-500\/80 { background-color: #a57670 !important; }
+    html.dark-theme .bg-emerald-500\/80 { background-color: #788779 !important; }
+    html.dark-theme .text-white { color: #f3ede4 !important; }
+    html.dark-theme .text-slate-950 { color: #191b1b !important; }
+    html.dark-theme .text-slate-200 { color: #e7e0d7 !important; }
+    html.dark-theme .text-slate-300 { color: #d1c8bc !important; }
+    html.dark-theme .text-slate-400 { color: #aca59b !important; }
+    html.dark-theme .text-slate-500 { color: #a39a8c !important; }
+    html.dark-theme .text-slate-600 { color: #9d9283 !important; }
+    html.dark-theme .text-sky-300 { color: #ddc1a0 !important; }
+    html.dark-theme .text-sky-400 { color: #ceb08b !important; }
+    html.dark-theme .text-emerald-300 { color: #b8c5ad !important; }
+    html.dark-theme .text-emerald-400 { color: #b3c0aa !important; }
+    html.dark-theme .text-amber-400 { color: #d5b58c !important; }
+    html.dark-theme .text-rose-400 { color: #c8aaa0 !important; }
+    html.dark-theme .text-purple-300 { color: #cbb5c0 !important; }
+    html.dark-theme .text-purple-400 { color: #c0a6b5 !important; }
+    html.dark-theme .border-slate-950 { border-color: #191b1b !important; }
+    html.dark-theme .border-slate-800 { border-color: #41433e !important; }
+    html.dark-theme .border-slate-800\/50 { border-color: rgba(105,105,96,.35) !important; }
+    html.dark-theme .border-slate-800\/60 { border-color: rgba(105,105,96,.42) !important; }
+    html.dark-theme .border-slate-800\/80 { border-color: rgba(105,105,96,.6) !important; }
+    html.dark-theme .border-slate-700 { border-color: #53554e !important; }
+    html.dark-theme .border-slate-700\/80 { border-color: #53554e !important; }
+    html.dark-theme .border-sky-500 { border-color: #9c876c !important; }
+    html.dark-theme .border-sky-400 { border-color: #b09a7b !important; }
+    html.dark-theme .border-sky-500\/30 { border-color: rgba(176,154,123,.4) !important; }
+    html.dark-theme .border-sky-500\/40 { border-color: rgba(176,154,123,.5) !important; }
+    html.dark-theme .border-sky-500\/50 { border-color: rgba(176,154,123,.6) !important; }
+    html.dark-theme .border-emerald-400 { border-color: #97a18c !important; }
+    html.dark-theme .border-emerald-500\/30 { border-color: rgba(151,161,140,.4) !important; }
+    html.dark-theme .border-amber-500\/30 { border-color: rgba(199,165,120,.45) !important; }
+    html.dark-theme .placeholder-slate-500 { color: #9b958b !important; }
+    html.dark-theme .hover\:bg-slate-800:hover { background-color: #424641 !important; }
+    html.dark-theme .hover\:bg-sky-500:hover { background-color: #a28c70 !important; }
+    html.dark-theme .hover\:bg-emerald-500:hover { background-color: #859685 !important; }
+    html.dark-theme .hover\:text-white:hover { color: #fff6e9 !important; }
+    html.dark-theme .hover\:text-sky-300:hover { color: #e5c6a1 !important; }
+    html.dark-theme .hover\:text-emerald-300:hover { color: #cbd7c1 !important; }
+    html.dark-theme .hover\:text-purple-300:hover { color: #dfc4d1 !important; }
+    html.dark-theme .hover\:border-slate-700:hover { border-color: #77766c !important; }
+    html.dark-theme .hover\:border-sky-400:hover, html.dark-theme .hover\:border-sky-500\/50:hover { border-color: #ad9678 !important; }
+    html.dark-theme input { caret-color: #e7e0d7; }
+    @media print {
+      html.dark-theme body { background: white !important; color: #26221d !important; }
+      html.dark-theme .text-white { color: #26221d !important; }
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans min-h-screen antialiased selection:bg-sky-500/20 selection:text-sky-300 transition-colors duration-300" id="app-body">
@@ -123,9 +220,9 @@
             class="w-full bg-slate-900 border border-slate-700/80 rounded-lg pl-8 pr-3 py-1.5 text-xs font-mono text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition">
         </div>
 
-        <button id="theme-toggle" class="px-3 py-1.5 text-xs font-mono bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg text-slate-300 hover:text-white flex items-center space-x-1.5 transition" title="Toggle Theme (Dark / Light / Matrix)">
-          <i class="fa-solid fa-circle-half-stroke text-sky-400" id="theme-icon"></i>
-          <span id="theme-text" class="hidden md:inline">Slate Dark</span>
+        <button id="theme-toggle" class="px-3 py-1.5 text-xs font-mono bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg text-slate-300 hover:text-white flex items-center space-x-1.5 transition" title="Switch to Charcoal Dark theme" type="button" aria-label="Switch to Charcoal Dark theme" aria-pressed="false">
+          <i class="fa-solid fa-sun text-sky-400" id="theme-icon" aria-hidden="true"></i>
+          <span id="theme-text">Soft Beige</span>
         </button>
 
         <button onclick="window.print()" class="px-3 py-1.5 text-xs font-mono bg-sky-600 hover:bg-sky-500 text-white font-medium rounded-lg shadow-sm hover:shadow flex items-center space-x-1.5 transition">
@@ -383,10 +480,10 @@
             <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/60 pb-3">
               <div>
                 <div class="flex items-center space-x-2">
-                  <h3 class="text-base font-bold font-mono text-white">Graduate Research Assistant (LEAP Web Lead) & Teaching Assistant</h3>
+                  <h3 class="text-base font-bold font-mono text-white">Graduate Research Assistant & Teaching Assistant</h3>
                   <span class="px-2 py-0.5 bg-sky-500/10 text-sky-400 border border-sky-500/30 rounded font-mono text-[10px]">Academic</span>
                 </div>
-                <p class="text-xs font-mono text-sky-400 mt-0.5">New Mexico State University (NMSU) <span class="text-slate-500 font-sans">| Dept. of Computer Science</span></p>
+                <p class="text-xs font-mono text-sky-400 mt-0.5">New Mexico State University (NMSU) <span class="text-slate-500 font-sans">| Dept. of Computer Science | Dept. of Astronomy</span></p>
               </div>
               <span class="font-mono text-xs text-slate-400 bg-slate-950 px-2.5 py-1 rounded border border-slate-800">
                 August 2026 – Present
@@ -610,7 +707,7 @@
 
         <div class="flex items-center space-x-3 sm:space-x-6 text-xs font-mono">
           <div class="text-center px-3 py-1 bg-slate-950 rounded border border-slate-800">
-            <span class="block text-sky-400 font-bold text-sm">16</span>
+            <span class="block text-sky-400 font-bold text-sm">19</span>
             <span class="text-[10px] text-slate-500 uppercase">Citations</span>
           </div>
           <div class="text-center px-3 py-1 bg-slate-950 rounded border border-slate-800">
@@ -798,7 +895,7 @@
   </main>
 
   <footer class="border-t border-slate-800/80 mt-12 py-8 bg-slate-950 no-print text-center font-mono text-xs text-slate-500 space-y-2">
-    <p class="text-[11px] text-slate-600">Built with Clean Developer CS UI Aesthetics, Tailwind CSS & Gemini • 2026</p>
+    <p class="text-[11px] text-slate-600">Built with Tailwind CSS • 2026</p>
   </footer>
 
   <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-10 opacity-0 transition-all duration-300 pointer-events-none">
@@ -920,31 +1017,19 @@
       });
     }
 
-    const themes = ['slate-dark', 'clean-light', 'matrix-code'];
-    let currentThemeIdx = 0;
-
+    // Beige is always the default on page load; dark mode is optional.
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const themeText = document.getElementById('theme-text');
-    const body = document.getElementById('app-body');
-
+    themeIcon.className = 'fa-solid fa-sun text-sky-400';
     themeToggleBtn.addEventListener('click', () => {
-      currentThemeIdx = (currentThemeIdx + 1) % themes.length;
-      const theme = themes[currentThemeIdx];
-
-      if (theme === 'clean-light') {
-        body.className = "bg-slate-50 text-slate-800 font-sans min-h-screen antialiased selection:bg-sky-500/20";
-        themeIcon.className = "fa-solid fa-sun text-amber-500";
-        themeText.textContent = "Clean Light";
-      } else if (theme === 'matrix-code') {
-        body.className = "bg-black text-emerald-400 font-mono min-h-screen antialiased selection:bg-emerald-500/30";
-        themeIcon.className = "fa-solid fa-terminal text-emerald-400";
-        themeText.textContent = "Matrix Code";
-      } else {
-        body.className = "bg-slate-950 text-slate-200 font-sans min-h-screen antialiased selection:bg-sky-500/20 selection:text-sky-300";
-        themeIcon.className = "fa-solid fa-circle-half-stroke text-sky-400";
-        themeText.textContent = "Slate Dark";
-      }
+      const dark = document.documentElement.classList.toggle('dark-theme');
+      themeIcon.className = dark ? 'fa-solid fa-moon text-sky-400' : 'fa-solid fa-sun text-sky-400';
+      themeText.textContent = dark ? 'Charcoal Dark' : 'Soft Beige';
+      themeToggleBtn.setAttribute('aria-pressed', String(dark));
+      const nextTheme = dark ? 'Soft Beige' : 'Charcoal Dark';
+      themeToggleBtn.setAttribute('aria-label', `Switch to ${nextTheme} theme`);
+      themeToggleBtn.title = `Switch to ${nextTheme} theme`;
     });
   </script>
 </body>
